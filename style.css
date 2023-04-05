@@ -45,32 +45,56 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 0 5rem;
+  padding: 0 6rem;
 }
 
 .form {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  background-color: rgb(255,255,255, 0.6);
 }
 
 fieldset {
-  background-color: rgb(255,255,255, 0.5);
-  padding: 3rem 5rem 1rem 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60rem;
+  gap: 2rem;
+  border-width: 0;
+  padding: 3.5rem 10rem 1rem 6rem;
   position: relative;
 }
 
+input {
+  margin-top: 0.3rem;
+  width: 15rem;
+  padding: 10px;
+  border: solid 1px white;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+input:hover {
+  box-shadow: 0 0 3px;
+}
+
+input:valid {
+  border: solid 2px green;
+}
+
+input:invalid {
+  border: solid 2px red;
+}
+
 legend {
-  font-size: 20px;
+  font-size: 1.4rem;
   position: absolute;
-  top: 5px;
+  top: 10px;
 }
 
 .submit {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 0 5rem;
+  padding: 0 6rem;
 }
 
 .submit button {
@@ -81,6 +105,15 @@ legend {
   border-radius: 15px;
   font-size: 20px;
   box-shadow: 0 0 10px;
+}
+
+.submit button:hover {
+  border: solid 3px aliceblue;
+}
+
+.submit button:active {
+  position: relative;
+  top: 2px;
 }
 
 .submit a{
