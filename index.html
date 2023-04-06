@@ -6,52 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign-up form</title>
   <link rel="stylesheet" href="style.css">
+  <script src="confirm.js" defer></script>
 </head>
 <body>
   <div class="logo-cont">
     <img src="images/icon.png" alt="">
-    <h1>NICE LOGO</h1>
+    <h1>NICE LOGO&trade;</h1>
   </div>
   <div class="form-cont">
     <div class="text">
       <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sing up <em>now</em> to get started.</h2>
       <h2>You <em>know</em> you want to.</h2>
     </div>
-    <div class="form">
-      <form action="#" method="post">
+    <form action="#" onsubmit="console.log('submitted')">
+      <div class="form">
         <fieldset>
-          <legend>Let's do this!</legend>
+          <legend><b>Let's do this!</b></legend>
           <div>
           <label for="first-name">FIRST NAME</label><br>
-          <input type="text" name="first-name" id="first-name">
+          <input type="text" name="first-name" id="first-name" required>
           </div>
           <div>
             <label for="last-name">LAST NAME</label><br>
-            <input type="text" name="last-name" id="last-name">
+            <input type="text" name="last-name" id="last-name" required>
           </div>
           <div>
             <label for="email">EMAIL</label><br>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
           </div>
           <div>
             <label for="phone-number">PHONE NUMBER</label><br>
-            <input type="tel" name="phone-number" id="phone-number">
+            <input type="tel" name="phone-number" id="phone-number" required>
           </div>
           <div>
             <label for="password">PASSWORD</label><br>
-            <input type="password" name="password" id="password"><br>
+            <input type="password" name="password" id="password" required><br>
           </div>
           <div>
             <label for="confirm-password">CONFIRM PASSWORD</label><br>
-            <input type="password" name="confirm-password" id="confirm-password"><br>
-            <label></label>
+            <input type="password" name="confirm-password" id="confirm-password" required><br>
+            <span class="error"></span>
           </div>
-          
         </fieldset>
-      </form>
-    </div>
-    <div class="submit">
-      <button type="submit">Create Account</button>
+      </div>
+      <input type="submit" name="submit" id="submit" value="Create Account">
+    </form>
+    <div class="login">
       <p>Already have an account? <a href="#">Log in</a></p>
     </div>
   </div>
